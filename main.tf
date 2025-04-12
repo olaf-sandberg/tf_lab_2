@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 module "network" {
-  source = "./modules/network"
+  source = "./network"
 
   vpcs = var.vpcs
   subnets    = var.subnets
