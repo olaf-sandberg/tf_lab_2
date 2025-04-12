@@ -18,7 +18,7 @@ resource "aws_vpc" "this" {
 resource "aws_subnet" "this" {
   for_each = var.subnets
 
-  vpc_id            = aws_vpc.this.id
+  vpc_id            = aws_vpc.this[each.key].id
   cidr_block        = each.value.cidr_bloc
 
 tags = merge(
