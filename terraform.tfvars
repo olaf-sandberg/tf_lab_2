@@ -1,29 +1,33 @@
 vpcs = {
-  "VPC_A" = {
-  cidr_block = "10.100.0.0/16"
-  name       = "tf_lab_2_vpc_a"
+  "VPC_Poland" = {
+  cidr_block = "10.0.0.0/16"
+  name       = "VPC_Poland"
   }
-    "VPC_B" = {
-  cidr_block = "10.200.0.0/16"
-  name       = "tf_lab_2_vpc_b"
+    "VPC_Germany" = {
+  cidr_block = "10.100.0.0/16"
+  name       = "VPC_Germany"
   }
 }
 
 subnets = {
-  "public_a" = {
-    cidr_block = "10.100.0.0/24"
-    name       = "tf_subnet_pub_a"
+  "s_pol_pub" = {
+    cidr_block = "10.0.1.0/24"
+    name       = "s_pol_pub"
+    vpc_key = "VPC_Poland"
   },
-  "private_a" = {
-    cidr_block = "10.100.1.0/24"
-    name       = "tf_subnet_priv_a"
+  "s_pol_priv" = {
+    cidr_block = "10.0.2.0/24"
+    name       = "s_pol_priv"
+    vpc_key = "VPC_Poland"
   }
-    "public_b" = {
-    cidr_block = "10.200.0.0/24"
-    name       = "tf_subnet_pub_b"
+    "s_ger_pub" = {
+    cidr_block = "10.100.1.0/24"
+    name       = "s_ger_pub"
+    vpc_key = "VPC_Germany"
   },
-  "private_b" = {
-    cidr_block = "10.200.1.0/24"
-    name       = "tf_subnet_priv_b"
+  "s_ger_priv" = {
+    cidr_block = "10.100.2.0/24"
+    name       = "s_ger_priv"
+    vpc_key = "VPC_Germany"
   }
 }
