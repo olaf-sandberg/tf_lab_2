@@ -15,21 +15,21 @@ subnets = {
   "s_pol_pub" = {
     cidr_block = "10.0.1.0/24"
     name       = "s_pol_pub"
-    vpc_key = "VPC_Poland"
+    vpc_key    = "VPC_Poland"
   },
   "s_pol_priv" = {
     cidr_block = "10.0.2.0/24"
     name       = "s_pol_priv"
-    vpc_key = "VPC_Poland"
+    vpc_key    = "VPC_Poland"
   },
-    "s_ger_pub" = {
+  "s_ger_pub" = {
     cidr_block = "10.100.1.0/24"
     name       = "s_ger_pub"
-    vpc_key = "VPC_Germany"
+    vpc_key    = "VPC_Germany"
   },
   "s_ger_priv" = {
     cidr_block = "10.100.2.0/24"
     name       = "s_ger_priv"
-    vpc_key = "VPC_Germany"
+    vpc_key    = "VPC_Germany"
   }
 }
