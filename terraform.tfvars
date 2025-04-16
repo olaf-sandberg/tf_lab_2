@@ -21,7 +21,7 @@ subnets = {
     cidr_block = "10.0.2.0/24"
     name       = "s_pol_priv"
     vpc_key = "VPC_Poland"
-  }
+  },
     "s_ger_pub" = {
     cidr_block = "10.100.1.0/24"
     name       = "s_ger_pub"
