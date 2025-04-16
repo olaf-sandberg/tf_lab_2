@@ -28,12 +28,12 @@ output "subnet_cidr_blocks" {
 
 output "public_subnet_ids" {
   description = "List of IDs for public subnets"
-  value = [for k, v in aws_subnet.this : v.id if contains(k, "pub")]
+  value = [for k, v in aws_subnet.this : v.id if strcontains(k, "pub")]
 }
 
 output "private_subnet_ids" {
   description = "List of IDs for private subnets"
-  value = [for k, v in aws_subnet.this : v.id if contains(k, "priv")]
+  value = [for k, v in aws_subnet.this : v.id if strcontains(k, "priv")]
 }
 
 output "route_table_ids" {
