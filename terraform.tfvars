@@ -1,3 +1,5 @@
+aws_region = "eu-central-1"
+
 vpcs = {
   "VPC_Poland" = {
   cidr_block = "10.0.0.0/16"
