@@ -41,3 +41,20 @@ resource "aws_internet_gateway" "this" {
     var.common_tags
   )
 }
+
+resource "aws_route_table" "this" {
+  for_each = var.subnets
+
+  vpc_id = aws_vpc.this[each.value.vpc_key].id
+
+  tags = {
+    Name = "${each.value.name}_rt"
+  }
+}
+
+resource "aws_route_table_association" "this" {
+  for_each = var.subnets
+
+  subnet_id      = aws_subnet.this[each.key].id
+  route_table_id = aws_route_table.this[each.key].id
+}
