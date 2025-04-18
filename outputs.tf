@@ -39,3 +39,11 @@ output "poland_public_ip" {
 output "poland_private_instance_ids" {
   value = module.compute_poland.private_instance_ids
 }
+
+output "germany_public_ip" {
+  value = module.compute_germany.public_ip
+}
+
+output "germany_private_instance_ids" {
+  value = module.compute_germany.private_instance_ids
+}

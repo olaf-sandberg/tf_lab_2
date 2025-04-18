@@ -43,3 +43,17 @@ module "compute_poland" {
   private_sg_id      = module.security.private_sg_ids["sg_VPC_Poland_priv"]
 
 }
+
+module "compute_germany" {
+  source             = "./compute"
+
+  ami_id             = var.ami_id
+  instance_type      = var.instance_type
+  key_name           = var.key_name
+
+  public_subnet_id   = module.network.subnet_ids["s_ger_pub"]
+  private_subnet_id  = module.network.subnet_ids["s_ger_priv"]
+
+  public_sg_id       = module.security.public_sg_ids["sg_VPC_Germany_pub"]
+  private_sg_id      = module.security.private_sg_ids["sg_VPC_Germany_priv"]
+}
