@@ -28,3 +28,20 @@ module "security" {
   vpcs          = var.vpcs
   aws_vpc_ref   = module.network.vpc_ids
 }
+
+module "compute_poland" {
+  source             = "./compute"
+
+  ami_id             = var.ami_id
+  instance_type      = var.instance_type
+  key_name           = var.key_name
+
+  public_subnet_id   = module.network.subnet_ids["s_pol_pub"]
+  private_subnet_id  = module.network.subnet_ids["s_pol_priv"]
+
+  public_sg_id       = module.security.public_sg_ids["sg_pol_pub"]
+  private_sg_id      = module.security.private_sg_ids["sg_pol_priv"]
+
+  project_name       = local.project_name
+  environment        = "pol"
+}

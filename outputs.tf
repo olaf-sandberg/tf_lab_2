@@ -31,3 +31,11 @@ output "private_subnet_ids" {
 output "security_group_ids" {
   value = module.security
 }
+
+output "poland_public_ip" {
+  value = module.compute_poland.public_ip
+}
+
+output "poland_private_instance_ids" {
+  value = module.compute_poland.private_instance_ids
+}

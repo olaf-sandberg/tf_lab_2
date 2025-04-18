@@ -40,3 +40,7 @@ igw_routes = {
   s_pol_pub = true
   s_ger_pub = true
 }
+
+ami_id        = "ami-03250b0e01c28d196"
+instance_type = "t3.micro"
+key_name      = "LAB-OLO"
