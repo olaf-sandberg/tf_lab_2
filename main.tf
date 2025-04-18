@@ -22,3 +22,9 @@ module "network" {
   igw_routes = var.igw_routes
 
 }
+
+module "security" {
+  source        = "./security"
+  vpcs          = var.vpcs
+  aws_vpc_ref   = module.network.vpc_ids
+}

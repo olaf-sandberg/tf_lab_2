@@ -27,3 +27,7 @@ output "private_subnet_ids" {
   description = "List of private subnet IDs (from network module)"
   value       = module.network.private_subnet_ids
 }
+
+output "security_group_ids" {
+  value = module.security
+}
