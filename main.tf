@@ -30,7 +30,7 @@ module "security" {
 }
 
 module "compute_poland" {
-  source             = "./compute"
+  source = "./compute"
 
   ami_id             = var.ami_id
   instance_type      = var.instance_type
