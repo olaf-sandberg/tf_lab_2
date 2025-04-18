@@ -19,5 +19,6 @@ module "network" {
   subnets    = var.subnets
   aws_region = var.aws_region
   common_tags = local.common_tags
+  igw_routes = var.igw_routes
 
 }

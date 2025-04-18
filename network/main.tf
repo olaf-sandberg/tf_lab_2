@@ -58,3 +58,14 @@ resource "aws_route_table_association" "this" {
   subnet_id      = aws_subnet.this[each.key].id
   route_table_id = aws_route_table.this[each.key].id
 }
+
+resource "aws_route" "igw_route" {
+  for_each = {
+    for subnet_key, use_igw in var.igw_routes : subnet_key => use_igw
+    if use_igw
+  }
+
+  route_table_id         = aws_route_table.this[each.key].id
+  destination_cidr_block = "0.0.0.0/0"
+  gateway_id             = aws_internet_gateway.this[var.subnets[each.key].vpc_key].id
+}

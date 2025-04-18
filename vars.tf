@@ -19,3 +19,9 @@ variable "subnets" {
     vpc_key    = string
   }))
 }
+
+variable "igw_routes" {
+  description = "Subnets that need a default route to IGW"
+  type        = map(bool)
+}
+
