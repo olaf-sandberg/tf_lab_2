@@ -39,7 +39,7 @@ module "compute_poland" {
   public_subnet_id   = module.network.subnet_ids["s_pol_pub"]
   private_subnet_id  = module.network.subnet_ids["s_pol_priv"]
 
-  public_sg_id       = module.security.public_sg_ids["sg_pol_pub"]
-  private_sg_id      = module.security.private_sg_ids["sg_pol_priv"]
+  public_sg_id       = module.security.public_sg_ids["sg_Poland_pub"]
+  private_sg_id      = module.security.private_sg_ids["sg_Poland_priv"]
 
 }
