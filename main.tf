@@ -43,3 +43,11 @@ module "compute_poland" {
   private_sg_id      = module.security.private_sg_ids["sg_Poland_priv"]
 
 }
+
+output "actual_public_sg_keys" {
+  value = keys(module.security.public_sg_ids)
+}
+
+output "actual_private_sg_keys" {
+  value = keys(module.security.private_sg_ids)
+}
