@@ -6,10 +6,6 @@ resource "aws_instance" "public" {
   vpc_security_group_ids      = [var.public_sg_id]
   associate_public_ip_address = true
   key_name                    = var.key_name
-
-  tags = {
-    Name = "${var.project_name}-${var.environment}-bastion"
-  }
 }
 
 # Elastic IP for Public Instance
@@ -25,10 +21,6 @@ resource "aws_instance" "private1" {
   subnet_id              = var.private_subnet_id
   vpc_security_group_ids = [var.private_sg_id]
   key_name               = var.key_name
-
-  tags = {
-    Name = "${var.project_name}-${var.environment}-app1"
-  }
 }
 
 # Private EC2 Instance 2
@@ -38,8 +30,4 @@ resource "aws_instance" "private2" {
   subnet_id              = var.private_subnet_id
   vpc_security_group_ids = [var.private_sg_id]
   key_name               = var.key_name
-
-  tags = {
-    Name = "${var.project_name}-${var.environment}-app2"
-  }
 }
