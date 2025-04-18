@@ -33,9 +33,10 @@ subnets = {
     vpc_key    = "VPC_Germany"
   }
 
+}
+
+
 igw_routes = {
   s_pol_pub = true
   s_ger_pub = true
-}
-
 }
