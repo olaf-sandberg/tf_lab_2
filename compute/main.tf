@@ -15,7 +15,7 @@ resource "aws_instance" "public" {
 # Elastic IP for Public Instance
 resource "aws_eip" "bastion_eip" {
   instance = aws_instance.public.id
-  vpc     = true
+  domain   = "vpc"
 }
 
 # Private EC2 Instance 1
