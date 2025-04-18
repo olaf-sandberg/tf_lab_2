@@ -41,24 +41,3 @@ variable "key_name" {
   description = "SSH key name to associate"
   type        = string
 }
-
-variable "public_subnet_id" {
-  description = "Subnet ID for the public instance"
-  type        = string
-}
-
-variable "private_subnet_id" {
-  description = "Subnet ID for the private instances"
-  type        = string
-}
-
-variable "public_sg_id" {
-  description = "Security group ID for the public instance"
-  type        = string
-}
-
-variable "private_sg_id" {
-  description = "Security group ID for the private instances"
-  type        = string
-}
-
