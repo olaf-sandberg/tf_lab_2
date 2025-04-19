@@ -15,6 +15,14 @@ resource "aws_security_group" "pub" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+    description = "ICMP (ping) from anywhere"
+    from_port   = -1
+    to_port     = -1
+    protocol    = "icmp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
@@ -44,6 +52,14 @@ resource "aws_security_group" "priv" {
     security_groups = [
       aws_security_group.pub["sg_${each.value.name}_pub"].id
     ]
+  }
+
+  ingress {
+    description = "ICMP (ping) from anywhere"
+    from_port   = -1
+    to_port     = -1
+    protocol    = "icmp"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
