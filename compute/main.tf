@@ -14,7 +14,7 @@ resource "aws_eip" "bastion_eip" {
   domain   = "vpc"
 }
 
-# Public EC2 Instance (Wwebeb)
+# Public EC2 Instance (Web)
 resource "aws_instance" "web" {
   ami                         = var.ami_id
   instance_type               = var.instance_type
