@@ -17,6 +17,8 @@ variable "subnets" {
     cidr_block = string
     name       = string
     vpc_key    = string
+    availability_zone = string
+    
   }))
 }
 

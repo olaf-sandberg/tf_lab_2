@@ -38,6 +38,7 @@ module "compute_poland" {
 
   public_subnet_id   = module.network.subnet_ids["s_pol_pub"]
   private_subnet_id  = module.network.subnet_ids["s_pol_priv"]
+  private_subnet_id2  = module.network.subnet_ids["s_pol_priv2"]
 
   public_sg_id       = module.security.public_sg_ids["sg_VPC_Poland_pub"]
   private_sg_id      = module.security.private_sg_ids["sg_VPC_Poland_priv"]
@@ -53,6 +54,7 @@ module "compute_germany" {
 
   public_subnet_id   = module.network.subnet_ids["s_ger_pub"]
   private_subnet_id  = module.network.subnet_ids["s_ger_priv"]
+  private_subnet_id2  = module.network.subnet_ids["s_ger_priv2"]
 
   public_sg_id       = module.security.public_sg_ids["sg_VPC_Germany_pub"]
   private_sg_id      = module.security.private_sg_ids["sg_VPC_Germany_priv"]

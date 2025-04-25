@@ -33,3 +33,8 @@ variable "private_sg_id" {
   description = "Security group ID for the private instances"
   type        = string
 }
+
+variable "private_subnet_id2" {
+  description = "Subnet ID for the second set of private instances"
+  type        = string
+}

@@ -20,6 +20,7 @@ resource "aws_subnet" "this" {
 
   vpc_id            = aws_vpc.this[each.value.vpc_key].id
   cidr_block        = each.value.cidr_block
+  availability_zone = each.value.availability_zone
 
 tags = merge(
     {

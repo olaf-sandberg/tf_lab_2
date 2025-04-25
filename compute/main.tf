@@ -31,3 +31,21 @@ resource "aws_instance" "private2" {
   vpc_security_group_ids = [var.private_sg_id]
   key_name               = var.key_name
 }
+
+# Private EC2 Instance 3
+resource "aws_instance" "private3" {
+  ami                    = var.ami_id
+  instance_type          = var.instance_type
+  subnet_id              = var.private_subnet_id2
+  vpc_security_group_ids = [var.private_sg_id]
+  key_name               = var.key_name
+}
+
+# Private EC2 Instance 24
+resource "aws_instance" "private4" {
+  ami                    = var.ami_id
+  instance_type          = var.instance_type
+  subnet_id              = var.private_subnet_id2
+  vpc_security_group_ids = [var.private_sg_id]
+  key_name               = var.key_name
+}
