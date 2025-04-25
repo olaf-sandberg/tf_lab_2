@@ -36,8 +36,8 @@ module "compute_poland" {
   instance_type      = var.instance_type
   key_name           = var.key_name
 
-  public_subnet_ids   = module.network.subnet_ids
-  private_subnet_ids  = module.network.subnet_ids
+  public_subnet_ids  = module.network.public_subnet_ids_poland
+  private_subnet_ids = module.network.private_subnet_ids_poland
 
   public_sg_id       = module.security.public_sg_ids["sg_VPC_Poland_pub"]
   private_sg_id      = module.security.private_sg_ids["sg_VPC_Poland_priv"]
@@ -51,8 +51,8 @@ module "compute_germany" {
   instance_type      = var.instance_type
   key_name           = var.key_name
 
-  public_subnet_ids   = module.network.subnet_ids
-  private_subnet_ids  = module.network.subnet_ids
+  public_subnet_ids  = module.network.public_subnet_ids_germany
+  private_subnet_ids = module.network.private_subnet_ids_germany
 
   public_sg_id       = module.security.public_sg_ids["sg_VPC_Germany_pub"]
   private_sg_id      = module.security.private_sg_ids["sg_VPC_Germany_priv"]

@@ -42,3 +42,23 @@ output "route_table_ids" {
     for k, v in aws_route_table.this : k => v.id
   }
 }
+
+output "public_subnet_ids_poland" {
+  description = "List of public subnet IDs in Poland"
+  value = [for k, v in aws_subnet.this : v.id if strcontains(k, "s_pol_pub")]
+}
+
+output "private_subnet_ids_poland" {
+  description = "List of private subnet IDs in Poland"
+  value = [for k, v in aws_subnet.this : v.id if strcontains(k, "s_pol_priv")]
+}
+
+output "public_subnet_ids_germany" {
+  description = "List of public subnet IDs in Germany"
+  value = [for k, v in aws_subnet.this : v.id if strcontains(k, "s_ger_pub")]
+}
+
+output "private_subnet_ids_germany" {
+  description = "List of private subnet IDs in Germany"
+  value = [for k, v in aws_subnet.this : v.id if strcontains(k, "s_ger_priv")]
+}
