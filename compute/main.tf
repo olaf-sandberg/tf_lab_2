@@ -52,7 +52,7 @@ resource "aws_instance" "private2" {
 resource "aws_instance" "private3" {
   ami                    = var.ami_id
   instance_type          = var.instance_type
-  subnet_id              = var.private_subnet_id[1]
+  subnet_id              = var.private_subnet_ids[1]
   vpc_security_group_ids = [var.private_sg_id]
   key_name               = var.key_name
 }
@@ -61,7 +61,7 @@ resource "aws_instance" "private3" {
 resource "aws_instance" "private4" {
   ami                    = var.ami_id
   instance_type          = var.instance_type
-  subnet_id              = var.private_subnet_id[1]
+  subnet_id              = var.private_subnet_ids[1]
   vpc_security_group_ids = [var.private_sg_id]
   key_name               = var.key_name
 }
