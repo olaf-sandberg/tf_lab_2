@@ -72,6 +72,6 @@ igw_routes = {
   s_ger_pub = true
 }
 
-ami_id        = "CHANGE TO AMI FOR WEBSERVER"
+ami_id        = "ami-04d20b438ef4a018a"
 instance_type = "t3.micro"
 key_name      = "LAB-OLO"
