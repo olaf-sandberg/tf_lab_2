@@ -74,6 +74,6 @@ igw_routes = {
   s_ger_pub2 = true
 }
 
-ami_id        = "ami-04d20b438ef4a018a"
+ami_id        = "ami-06f47440a542d1f22"
 instance_type = "t3.micro"
 key_name      = "LAB-OLO"
