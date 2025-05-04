@@ -34,7 +34,7 @@ subnets = {
     cidr_block = "10.100.1.0/24"
     name       = "s_ger_pub"
     vpc_key    = "VPC_Germany"
-    availability_zone = "eu-central-1a"
+    availability_zone = "eu-central-1b"
   },
   "s_ger_pub2" = {
     cidr_block = "10.100.10.0/24"
@@ -53,7 +53,7 @@ subnets = {
     cidr_block = "10.100.3.0/24"
     name       = "s_ger_priv2"
     vpc_key    = "VPC_Germany"
-    availability_zone = "eu-central-1a"
+    availability_zone = "eu-central-1b"
   },
    "s_pol_priv2" = {
     cidr_block = "10.0.3.0/24"
