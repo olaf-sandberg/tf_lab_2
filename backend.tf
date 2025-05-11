@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    key            = "tf-lab2/terraform.tfstate"
+    key            = "tf/terraform.tfstate"
     region         = "eu-central-1"
-    bucket         = "terraform-olo-lab"
+    bucket         = "tf-state-olo"
     dynamodb_table = "tf-lab2"
     encrypt        = true
   }
