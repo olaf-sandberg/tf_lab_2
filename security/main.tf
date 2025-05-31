@@ -16,7 +16,7 @@ resource "aws_security_group" "pub" {
   }
 
   ingress {
-    description = "ICMP (ping) from anywhere"
+    description = "ICMP (ping) from anywher"
     from_port   = -1
     to_port     = -1
     protocol    = "icmp"
